@@ -1,0 +1,34 @@
+<div class="col-lf-12">
+    <div class="page-heaeder">
+        <h1 id="tables">Adicionar Departamentos</h1>
+    </div>
+    <div class="bs-component col-8">
+        <form action="/departamento/update/:id" method='post'>
+            <div class="form-group">
+                <label class="col-form-label mt-4" for="name">Nome</label>
+                <input 
+                type="text" 
+                class="form-control" 
+                placeholder="Default input" 
+                id="name"
+                name="name"
+                value="{{departamento.name}}">
+                <div class="invalid-feedback" style="display:block">{{showErrors errors 'name'}}</div>
+            </div>
+            <div class="form-group">
+            <label class="col-form-label mt-4" for="sigla">Sigla</label>
+            <input 
+                type="text" 
+                class="form-control" 
+                placeholder="Default input" 
+                id="sigla"
+                name="sigla"
+                value="{{departamento.sigla}}">
+                <div class="invalid-feedback" style="display:block">{{showErrors errors 'sigla'}}</div>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary">Adicionar</button>
+            </div>
+        </form>
+    </div>
+</div>
